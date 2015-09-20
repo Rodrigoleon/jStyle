@@ -1,0 +1,245 @@
+/*JStyle*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100);
+
+.jxcatalyst{
+	height: 100%;
+}
+
+
+.jxcatalyst .col-md-3{
+	display: block;
+	height: 100%;
+	background: red;
+	overflow: hidden; 
+}
+/*
+.jx1 .col-md-3:nth-of-type(even) {
+  background: #009ACD;
+}
+
+.jx1 .col-md-3:nth-of-type(odd) {
+  background: #BFEFFF;
+}
+
+.jx2 .col-md-3:nth-of-type(odd) {
+  background: #1C86EE;
+}
+
+.jx2 .col-md-3:nth-of-type(even) {
+  background: #36648B;
+}
+
+.jx3 .col-md-3:nth-of-type(odd) {
+  background: #1C86EE;
+}
+
+.jx3 .col-md-3:nth-of-type(even) {
+  background: #36648B;
+}
+
+.jx4 .col-md-3:nth-of-type(odd) {
+  background: #1C86EE;
+}
+
+.jx4 .col-md-3:nth-of-type(even) {
+  background: #36648B;
+}*/
+
+
+/* Common style */
+.jxcatalyst figure {
+	position: relative;
+	overflow: hidden;
+	margin: -15px -15px;
+	/*min-width: 320px;*/
+	min-width: 258px;
+	/*max-width: 480px;*/
+	max-height: 360px;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.jxcatalyst figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.jxcatalyst figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.jxcatalyst figure figcaption::before,
+.jxcatalyst figure figcaption::after {
+	pointer-events: none;
+}
+
+.jxcatalyst figure figcaption,
+.jxcatalyst figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.jxcatalyst figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.jxcatalyst figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.jxcatalyst figure h2 span {
+	font-weight: 800;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.jxcatalyst figure h2,
+.jxcatalyst figure p {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+.jxcatalyst figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/*-----------------*/
+/***** Apollo *****/
+/*-----------------*/
+
+figure.effect-apollo {
+	background: #3498db;
+}
+
+figure.effect-apollo img {
+	opacity: 0.95;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-apollo figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 3em;
+	padding: 0 1em;
+	max-width: 200px;
+	border-right: 4px solid #fff;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-apollo h2 {
+	text-align: left;
+}
+
+figure.effect-apollo:hover img {
+	opacity: 0.6;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+/*---------------*/
+/***** Duke *****/
+/*---------------*/
+
+figure.effect-duke {
+	background: -webkit-linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+	background: linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+}
+
+figure.effect-duke img,
+figure.effect-duke p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-duke:hover img {
+	opacity: 0.1;
+	-webkit-transform: scale3d(1.2,1.2,1);
+	transform: scale3d(1.2,1.2,1);
+}
+
+figure.effect-duke h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	font-size: 120%;
+}
+
+figure.effect-duke p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 20px;
+	padding: 30px;
+	text-transform: none;
+	font-size: 80%;
+	opacity: 0;
+	font-family: 'Lato', sans-serif;
+	-webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% -100%;
+	transform-origin: 50% -100%;
+}
+
+figure.effect-duke:hover h2,
+figure.effect-duke:hover p {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
